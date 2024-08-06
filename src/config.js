@@ -1,6 +1,6 @@
 function getConfig() {
     return {
-        name: "Simple-Widget"
+        name: "Chat-Bot"
     }
 }
 

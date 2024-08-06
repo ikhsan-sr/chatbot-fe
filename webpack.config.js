@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
-var copyWebpackPlugin = require('copy-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+const  copyWebpackPlugin = require('copy-webpack-plugin');
 const bundleOutputDir = './dist';
 
 module.exports = (env) => {
@@ -29,6 +30,11 @@ module.exports = (env) => {
         devServer: {
             contentBase: bundleOutputDir
         },
-        plugins: [new copyWebpackPlugin([{ from: 'demo/' }])]
+        plugins: [
+            new copyWebpackPlugin([{ from: 'demo/' }]),
+            new Dotenv({
+                path: './.env.production', // Path ke file .env
+            })
+        ]
     }];
 };

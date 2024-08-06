@@ -22,7 +22,7 @@ This method uses simple <script> tag reference as shown below:
     <div id="root"></div>
     
     <script src="http://somehost/widget.js"  
-            id="Simple-Widget-Script" 
+            id="Chat-Bot-Script" 
             data-config="{'name': 'w1', 'config': {'targetElementId': 'root'}}" ></script>
 ```
 
@@ -43,7 +43,7 @@ We can load the widget asynchronously. Using this method we create a *temporary*
 <div id="root">Loading...</div>
 <script>
     (function (w, d, s, o, f, js, fjs) {
-        w['Simple-Widget'] = o; w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+        w['Chat-Bot'] = o; w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
         js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
         js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
     }(window, document, 'script', 'w1', 'http://somehost/widget.js'));

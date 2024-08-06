@@ -33,7 +33,7 @@ module.exports = (env) => {
         plugins: [
             new copyWebpackPlugin([{ from: 'demo/' }]),
             new Dotenv({
-                path: './.env.production', // Path ke file .env
+                path: './.env', // Path ke file .env
             })
         ]
     }];
